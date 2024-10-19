@@ -1,5 +1,19 @@
 ---
+import '../styles/global.css';
 
+const pageTitle = "Over mij";
+
+const identity = {
+  firstName: "Seijno",
+  country: "Nederland",
+  occupation: "Frontend-Programmer & Designer",
+  hobbies: ["Drummen", "Sporten", "Gamen"]
+};
+
+const happy = true;
+const finished = false;
+
+const skills = ["HTML", "CSS", "JavaScript", "Svelte", "Astro", "Muziek schrijven"];
 ---
 
 <html lang="nl">
@@ -8,7 +22,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Over</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <nav>
@@ -16,6 +30,26 @@
             <a href="/about/">Over</a>
             <a href="/blog/">blog</a>
         </nav>
-		<h1>Over I Love Web</h1>
+		<h1>{pageTitle}</h1>
+        <p>Deze pagina bestaat om mijn ILW blogs te posten en meer.</p>
+        <p>Ik ben {identity.firstName} van Nieuwkoop, ik ben een {identity.occupation}</p>
+        <p>De skills waar ik over beschik zijn:
+            <ul>
+                {skills.map((skill) => <li>{skill}</li>)}
+            </ul>
+        </p>
+        <p>Mijn favoriete hobbie is {identity.hobbies[0]}.</p>
+        {happy && <p>Ik word blij van muziek maken!</p>}
+        {finished && <p>Ik ben klaar met de oefening</p>}
 	</body>
 </html>
+
+<style>
+    h1{
+        color: white;
+        text-align: center;
+    }
+    p{
+        color: white;
+    }
+</style>

@@ -1,5 +1,6 @@
 ---
-
+import '../styles/global.css';
+const pageTitle = "Blogs";
 ---
 
 <html lang="nl">
@@ -8,7 +9,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Blog</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <nav>
@@ -16,7 +17,12 @@
             <a href="/about/">Over</a>
             <a href="/blog/">blog</a>
         </nav>
-		<h1>Over Sprint 13</h1>
+		<h1>{pageTitle}</h1>
         <p>hier komt de markdown</p>
+        <ul>
+            <li><a href="/posts/sprint-13/">Sprint 13</a></li>
+            <li><a href="/posts/sprint-14/">Sprint 14</a></li>
+            <li><a href="/posts/sprint-15/">Sprint 15</a></li>
+        </ul>
 	</body>
 </html>
