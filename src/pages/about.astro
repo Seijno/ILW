@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 import '../styles/global.css';
 
 const pageTitle = "Over mij";
@@ -25,11 +27,7 @@ const skills = ["HTML", "CSS", "JavaScript", "Svelte", "Astro", "Muziek schrijve
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about/">Over</a>
-            <a href="/blog/">blog</a>
-        </nav>
+        <Header/>
 		<h1>{pageTitle}</h1>
         <p>Deze pagina bestaat om mijn ILW blogs te posten en meer.</p>
         <p>Ik ben {identity.firstName} van Nieuwkoop, ik ben een {identity.occupation}</p>
@@ -41,6 +39,7 @@ const skills = ["HTML", "CSS", "JavaScript", "Svelte", "Astro", "Muziek schrijve
         <p>Mijn favoriete hobbie is {identity.hobbies[0]}.</p>
         {happy && <p>Ik word blij van muziek maken!</p>}
         {finished && <p>Ik ben klaar met de oefening</p>}
+        <Footer/>
 	</body>
 </html>
 
