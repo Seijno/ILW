@@ -1,11 +1,12 @@
 ---
+layout: ../../layout/blogLayout.astro
 title: 'Sprint 14'
 pubDate: 2024-10-09
 description: 'Alle aantekeningen van sprint 14'
 author: 'Seijno van Nieuwkoop'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+    url: ''
+    alt: ''
 tags: ["astro", "blogging", "sprint 14"]
 ---
 # Sprint 14
