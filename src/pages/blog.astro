@@ -1,30 +1,13 @@
 ---
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
+import BaseLayout from '../layout/baseLayout.astro';
 import '../styles/global.css';
 const pageTitle = "Blogs";
 ---
-
-<html lang="nl">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-        <Header/>
-		<h1>{pageTitle}</h1>
-        <p>hier komt de markdown</p>
-        <ul>
-            <li><a href="/posts/sprint-13/">Sprint 13</a></li>
-            <li><a href="/posts/sprint-14/">Sprint 14</a></li>
-            <li><a href="/posts/sprint-15/">Sprint 15</a></li>
-        </ul>
-        <Footer/>
-        <script>
-            import "../scripts/menu.js";
-        </script>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <p>hier komt de markdown</p>
+    <ul>
+        <li><a href="/posts/sprint-13/">Sprint 13</a></li>
+        <li><a href="/posts/sprint-14/">Sprint 14</a></li>
+        <li><a href="/posts/sprint-15/">Sprint 15</a></li>
+    </ul>
+</BaseLayout>

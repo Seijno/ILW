@@ -1,6 +1,5 @@
 ---
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
+import BaseLayout from '../layout/baseLayout.astro';
 import '../styles/global.css';
 
 const pageTitle = "Over mij";
@@ -17,40 +16,20 @@ const finished = false;
 
 const skills = ["HTML", "CSS", "JavaScript", "Svelte", "Astro", "Muziek schrijven"];
 ---
-
-<html lang="nl">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-        <Header/>
-		<h1>{pageTitle}</h1>
-        <p>Deze pagina bestaat om mijn ILW blogs te posten en meer.</p>
-        <p>Ik ben {identity.firstName} van Nieuwkoop, ik ben een {identity.occupation}</p>
-        <p>De skills waar ik over beschik zijn:
-            <ul>
-                {skills.map((skill) => <li>{skill}</li>)}
-            </ul>
-        </p>
-        <p>Mijn favoriete hobbie is {identity.hobbies[0]}.</p>
-        {happy && <p>Ik word blij van muziek maken!</p>}
-        {finished && <p>Ik ben klaar met de oefening</p>}
-        <Footer/>
-        <script>
-            import "../scripts/menu.js";
-        </script>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <p>Deze pagina bestaat om mijn ILW blogs te posten en meer.</p>
+    <p>Ik ben {identity.firstName} van Nieuwkoop, ik ben een {identity.occupation}</p>
+    <p>De skills waar ik over beschik zijn:
+        <ul>
+            {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
+    </p>
+    <p>Mijn favoriete hobbie is {identity.hobbies[0]}.</p>
+    {happy && <p>Ik word blij van muziek maken!</p>}
+    {finished && <p>Ik ben klaar met de oefening</p>}
+</BaseLayout>
 
 <style>
-    h1{
-        color: white;
-        text-align: center;
-    }
     p{
         color: white;
     }
