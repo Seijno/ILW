@@ -9,7 +9,6 @@ image:
     alt: ''
 tags: ["astro", "blogging", "sprint 14"]
 ---
-# Sprint 14
 ## 23-9
 * Jamstack voor API's en workframes
 * Headless CMS bij. Directus
