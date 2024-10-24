@@ -1,25 +1,37 @@
 ---
-const { fileName, blogName } = Astro.props;
+const { url, blogName, pubDate } = Astro.props;
 ---
 <div>
-    <a href=`../posts/${fileName}`>{blogName}</a>
+    <a href={url}>{blogName}</a>
+    <small>rel:{pubDate.toString().slice(0,10)}</small>
 </div>
 
 <style>
-    div{
-        display: block;
-        margin: 1rem;
-        width: 14rem;
-        max-width: 10rem;
-        height: 5rem;
-        border: 1px solid black;
+div{
+    position: relative;
+    margin: 1rem 3rem;
+    width: 15rem;
+    height: 5rem;
+    border: 1px solid black;
 
+}
+div a{
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 4rem;
+    color: ghostwhite;
+}
+div small{
+    position: absolute;
+    font-size: 0.8rem;
+    right: 2px;
+    bottom: 2px;
+}
+@media screen and (max-width: 784px) {
+    div {
+        margin: 1rem 0.5rem;
+        width: 95%;
     }
-    div a{
-        font-size: 1rem;
-        text-align: center;
-        margin: 0 auto;
-        line-height: 5rem;
-        color: ghostwhite;
-    }
+}
 </style>

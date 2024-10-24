@@ -1,15 +1,10 @@
 ---
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-import '../styles/global.css';
+import BaseLayout from '../layout/baseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
-<Header/>
-<main>
-    <h1>{frontmatter.title}</h1>
+<BaseLayout pageTitle={frontmatter.title}>
     <small>Geschreven door: {frontmatter.author}</small><br>
     <small>Datum publiciteit: {frontmatter.pubDate.toString().slice(0,10)}</small><br>
     <small>Beschrijving: {frontmatter.description}</small>
     <slot />
-</main>
-<Footer/>
+</BaseLayout>

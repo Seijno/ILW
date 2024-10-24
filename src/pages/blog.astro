@@ -1,13 +1,11 @@
 ---
-import BaseLayout from '../layout/baseLayout.astro';
-import '../styles/global.css';
-const pageTitle = "Blogs";
+import BaseLayout from '../layout/baseLayout.astro'
+const allPosts = await Astro.glob('./posts/*.md');
+const pageTitle = "Blog";
 ---
 <BaseLayout pageTitle={pageTitle}>
-    <p>hier komt de markdown</p>
-    <ul>
-        <li><a href="/posts/sprint-13/">Sprint 13</a></li>
-        <li><a href="/posts/sprint-14/">Sprint 14</a></li>
-        <li><a href="/posts/sprint-15/">Sprint 15</a></li>
-    </ul>
+  <p>Alle blog posts</p>
+  <ul>
+    {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+  </ul>
 </BaseLayout>

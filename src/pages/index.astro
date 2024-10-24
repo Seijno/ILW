@@ -1,27 +1,27 @@
 ---
-import BaseLayout from '../layout/baseLayout.astro';
+import BaseLayout from '../layout/baseLayout.astro'
+import HighlightCard from '../components/HighlightCard.astro'
 import Card from '../components/Card.astro'
-const pageTitle = "I Love Web";
+const pageTitle = "I Love Web"
+const allPosts = await Astro.glob('./posts/*.md');
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>Mijn mooie notitie</h2>
+  <h2>Uitgelicht</h2>
   <content>
-    <Card fileName="sprint-13" blogName="Sprint 13"></Card>
-    <Card fileName="sprint-14" blogName="Sprint 14"></Card>
-    <Card fileName="sprint-15" blogName="Sprint 15"></Card>
+    <HighlightCard fileName="sprint-13" blogName="Sprint 13"></HighlightCard>
+    <HighlightCard fileName="sprint-14" blogName="Sprint 14"></HighlightCard>
+    <HighlightCard fileName="sprint-15" blogName="Sprint 15"></HighlightCard>
   </content>
-  <h2>WE LOVE WEB blogs</h2>
+  <h2>Alle WLW posts</h2>
   <content>
-    <Card fileName="WLW-Vasilis-van-Gemert" blogName="Vasilis van Gemert"></Card>
-    <Card fileName="WLW-Dion" blogName="Dion Pieters"></Card>
-    <Card fileName="WLW-Nicolas-Garnier" blogName="Nicolas Garnier"></Card>
+    {allPosts.map((post) => <Card url={post.url} blogName={post.frontmatter.title} pubDate={post.frontmatter.pubDate}/>)}
   </content>
 </BaseLayout>
 
 <style>
   content{
     display: flex;
-    justify-content: space-evenly ;
+    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
 
