@@ -1,7 +1,7 @@
 ---
 layout: ../../layout/blogLayout.astro
 title: 'WLW Vasilis van Gemert'
-pubDate: 2024-10-22
+pubDate: "2024-10-22"
 description: 'Aantekeningen van de WLW van Vasilis van Gemert'
 author: 'Seijno van Nieuwkoop'
 image:

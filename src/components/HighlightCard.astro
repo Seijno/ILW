@@ -7,13 +7,18 @@ const { fileName, blogName } = Astro.props;
 
 <style>
     div{
-        display: block;
-        margin: 1rem;
-        width: 14rem;
-        max-width: 10rem;
+        position: relative;
+        margin: 1rem 3rem;
+        width: 15rem;
         height: 5rem;
         border: 1px solid black;
+        background: #efd2247d;
+        transition: 0.4s;
 
+    }
+    div:hover{
+        background: #efd124cb;
+        transition: 0.4s;
     }
     div a{
         display: block;

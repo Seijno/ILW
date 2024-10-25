@@ -3,24 +3,32 @@ const { url, blogName, pubDate } = Astro.props;
 ---
 <div>
     <a href={url}>{blogName}</a>
-    <small>rel:{pubDate.toString().slice(0,10)}</small>
+    <small>rel:{pubDate}</small>
 </div>
 
 <style>
 div{
     position: relative;
     margin: 1rem 3rem;
-    width: 15rem;
+    width: 18rem;
     height: 5rem;
     border: 1px solid black;
+    background: #4444f49e;
+    transition: 0.4s;
 
 }
 div a{
     display: block;
     font-size: 1rem;
     text-align: center;
-    line-height: 4rem;
+    line-height: 5rem;
     color: ghostwhite;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 div small{
     position: absolute;
@@ -28,7 +36,11 @@ div small{
     right: 2px;
     bottom: 2px;
 }
-@media screen and (max-width: 784px) {
+div:hover{
+    background: #4444f4ca;
+    transition: 0.4;
+}
+@media screen and (max-width: 880px) {
     div {
         margin: 1rem 0.5rem;
         width: 95%;

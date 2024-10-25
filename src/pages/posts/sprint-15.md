@@ -1,7 +1,7 @@
 ---
 layout: ../../layout/blogLayout.astro
 title: 'Sprint 15'
-pubDate: 2024-10-09
+pubDate: "2024-10-09"
 description: 'Alle aantekeningen van sprint 15'
 author: 'Seijno van Nieuwkoop'
 image:
