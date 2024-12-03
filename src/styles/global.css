@@ -2,8 +2,13 @@
     box-sizing: border-box;
   }
 
+@font-face {
+  font-family: 'segino';
+  src: url('/src/fonts/segino-Regular.otf') format(openType);
+}
+
 html {
-    font-family: sans-serif;
+    font-family: 'segino', sans-serif;
   }
   
 body {
