@@ -29,4 +29,7 @@ const allPosts = await Astro.glob('./posts/*.md');
   h2{
     text-align: center;
   }
+  @view-transition {
+      navigation: auto;
+    }
 </style>

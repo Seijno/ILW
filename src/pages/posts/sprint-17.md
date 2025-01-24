@@ -27,3 +27,32 @@ Coding spike is a type of computer programming in wich the goal is to create som
 - @property
 - animation-timeline: view()
 
+## 2e coding spike
+### View transition
+- same document (
+    Met JS `document.startViewTransition`
+    ```JS
+    el.addEventListener('click', function(){
+        if (document.startViewTransition){
+
+        }
+        else{
+            mooiefunctie()
+        }
+    })
+    ```
+    ```CSS
+    
+    ```
+)
+- cross document (Css only, voor normale a links 
+``` CSS
+@view-transition{
+    navigation: auto; // smooth transitie tussen pagina's
+    animatie: ; // met keyframes kan je coole animaties maken voor een transitie
+}
+```
+)
+
+
+
