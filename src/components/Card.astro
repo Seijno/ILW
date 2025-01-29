@@ -1,46 +1,41 @@
 ---
-const { url, blogName, pubDate } = Astro.props;
+const { url, blogName } = Astro.props;
 ---
 <div>
-    <a href={url}>{blogName}</a>
-    <small>rel:{pubDate}</small>
+    <span><a href={url}>{blogName}</a></span>
 </div>
 
 <style>
 div{
     position: relative;
     margin: 1rem 1rem;
-    width: 30%;
-    height: 8rem;
+    width: 9rem;
+    border-radius: 20px;
+    height: 9rem;
     border: 1px solid black;
-    background: #4444f49e;
-    transition: 0.4s;
+    background: rgb(44, 44, 44);
+    transition: 0.5s;
+    scale: 1;
 
+}
+div:hover{
+    background: rgb(159, 159, 159);
+    transition: 0.5;
+    scale: 1.2;
 }
 div a{
     display: block;
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
-    line-height: 8rem;
     color: ghostwhite;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     word-break: break-all;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-div small{
-    position: absolute;
-    font-size: 0.8rem;
-    right: 2px;
-    bottom: 2px;
-    color: ghostwhite;
-}
-div:hover{
-    background: #4444f4ca;
-    transition: 0.4;
+    margin-top: 3rem;
 }
 @media screen and (max-width: 880px) {
     div {

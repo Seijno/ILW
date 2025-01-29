@@ -1,5 +1,5 @@
 ---
-layout: ../../layout/blogLayout.astro
+layout: ../../../layout/blogLayout.astro
 title: 'WLW Justus Sturkeboom'
 pubDate: "2024-12-13"
 description: 'Aantekeningen van de WLW van Nicolas Garnier'

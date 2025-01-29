@@ -1,5 +1,5 @@
 ---
-layout: ../../layout/blogLayout.astro
+layout: ../../../layout/blogLayout.astro
 title: 'The rise of AI-powered voice interfaces'
 pubDate: "2025-01-17"
 description: 'Alle aantekeningen van deze WLW'

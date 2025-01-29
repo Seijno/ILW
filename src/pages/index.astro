@@ -1,33 +1,38 @@
 ---
 import BaseLayout from '../layout/baseLayout.astro'
-import HighlightCard from '../components/HighlightCard.astro'
 import Card from '../components/Card.astro'
 const pageTitle = "I Love Web"
-const allPosts = await Astro.glob('./posts/*.md');
+const Posts = await Astro.glob('./posts/sprints/*.md');
+const WLW = await Astro.glob('./posts/WLW/*.md');
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>Uitgelicht</h2>
-  <content>
-    <HighlightCard fileName="sprint-13" blogName="Sprint 13"></HighlightCard>
-    <HighlightCard fileName="sprint-14" blogName="Sprint 14"></HighlightCard>
-    <HighlightCard fileName="sprint-15" blogName="Sprint 15"></HighlightCard>
+  <content class="sprintPosts active">
+    <h2>Sprint posts</h2>
+    {Posts.map((post) => <Card url={post.url} blogName={post.frontmatter.title} pubDate={post.frontmatter.pubDate}/>)}
   </content>
-  <h2>Alle WLW posts</h2>
-  <content>
-    {allPosts.map((post) => <Card url={post.url} blogName={post.frontmatter.title} pubDate={post.frontmatter.pubDate}/>)}
+  <content class="WLWPosts">
+    <h2>WLW aantekeningen</h2>
+    {WLW.map((post) => <Card url={post.url} blogName={post.frontmatter.title} pubDate={post.frontmatter.pubDate}/>)}
   </content>
 </BaseLayout>
+<script>
+  import "../scripts/filter.js";
+</script>
 
 <style>
   content{
-    display: flex;
+    display: none;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
 
   }
+  .active{
+    display: flex;
+  }
   h2{
     text-align: center;
+    width: 100%;
   }
   @view-transition {
       navigation: auto;

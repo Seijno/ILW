@@ -1,5 +1,5 @@
 ---
-layout: ../../layout/blogLayout.astro
+layout: ../../../layout/blogLayout.astro
 title: 'Sprint 18'
 pubDate: "2025-1-6"
 description: 'Alle aantekeningen van sprint 18'
