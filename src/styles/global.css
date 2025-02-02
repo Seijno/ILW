@@ -101,3 +101,7 @@ main{
   h1, h2, p, ul{
     color: ghostwhite;
   }
+
+  @view-transition {
+    navigation: auto;
+  }
