@@ -2,6 +2,7 @@
 <button class="WLWBtn">WLW</button>
 <style>
     button{
+        z-index: 9999;
         width: 12rem;
         height: 3rem;
         font-size: 22px;
@@ -11,6 +12,11 @@
         color: white;
         border: none;
         cursor: pointer;
+        transition: .4s;
+        &:hover{
+            background: rgb(72, 72, 72);
+            transition: .4s;
+        }
     }
     @font-face {
     	font-family: 'segino';

@@ -9,6 +9,7 @@
 
 html {
     font-family: 'segino', sans-serif;
+    background-color: transparent;
   }
   
 body {  
@@ -23,74 +24,16 @@ body {
   }
   @media(min-width: 1200px){
     background: rgb(87, 87, 87);
+    
   }
 }
 
 main{
   margin: 3rem;
 }
-/* nav styles */
-.hamburger {
-    padding-right: 20px;
-    cursor: pointer;
-  }
-  
-  .hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #ff9776;
-  }
-
-.nav-links {
-    width: 100%;
-    top: 5rem;
-    left: 48px;
-    background-color: #ff9776;
-    display: none;
-    margin: 0;
-  }
-  
-  .nav-links a {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.4s;
-  }
-  
-  .nav-links a:hover,
-  .nav-links a:focus {
-    background: #ff9776;
-    transition: 0.4s;
-  }
-  
   .expanded {
     display: unset;
   }
-  
-  @media screen and (min-width: 636px) {
-    .nav-links {
-      margin-left: 5em;
-      display: block;
-      position: static;
-      width: auto;
-      background: none;
-    }
-  
-    .nav-links a {
-      display: inline-block;
-      padding: 15px 20px;
-    }
-    .hamburger {
-        display: none;
-      }
-  }
-  
   h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
