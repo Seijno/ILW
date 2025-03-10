@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'segino';
-  src: url('/src/fonts/segino-Regular.otf') format(openType);
+  src: url('/src/fonts/segino-Regular.otf') format(truetype);
 }
 
 html {
