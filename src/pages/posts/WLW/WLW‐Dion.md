@@ -21,8 +21,10 @@ tags: ["astro", "blogging", "WLW", "Dion"]
 
 
 ## Wat past bij jou
-Dion zit tot hedendaags nogsteeds te kijken wat bij hem past, hier liet hij enkele voorbeelden zien die toch niet helemaal goed bij hem voelden.
+Dion zit tot hedendaags nogsteeds te kijken wat bij hem past, hier liet
+ hij enkele voorbeelden zien die toch niet helemaal goed bij hem voelden.
 
 ## Bronnen
 - [activetheory.net](https://activetheory.net/)
 - [easing.net](https://easings.net/)
+- [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/480px-Spotify_logo_without_text.svg.png" width="20"/>](https://open.spotify.com/track/6Jjulxk3K3CoTmTT5wxVaX?si=4133ba8ba5064881)
