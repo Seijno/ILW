@@ -27,7 +27,7 @@ Als html een tag niet herkend dan geeft het dezelfde purpose als een div.
 
 een <blink> tag is een oude en niet ondersteunde html tag, deze tag zorgde ervoor dat je content knipperde en dit wilde ze echt niet meer ondersteunen.
 
-<marquee> was een functie waarmee je tekst over je scherm kan laten lopen</marquee>
+<marquee> marquee is een functie waarmee je tekst over je scherm kan laten lopen</marquee>
 
 ## tokenizer
 
