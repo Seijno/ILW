@@ -1,5 +1,4 @@
 ---
-layout: ../../../layout/blogLayout.astro
 title: 'Sprint 18'
 pubDate: "2025-1-6"
 description: 'Alle aantekeningen van sprint 18'
@@ -10,8 +9,6 @@ image:
 tags: ["blogging", "sprint 18"]
 ---
 # Release Candidate
-## TLA
-<![<img src="image.png" width=600/>](image.png)>
 ### CSR
 Client side rendering, CSR is zwaar op je database en het kan liggen aan netwerk snelheid om je pagina's te renderen
 ### SSR

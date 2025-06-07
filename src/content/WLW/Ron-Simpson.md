@@ -1,5 +1,4 @@
 ---
-layout: ../../../layout/blogLayout.astro
 title: 'Ron Simpson'
 pubDate: "2025-04-01"
 description: 'Alle aantekeningen van deze pitch'

@@ -1,5 +1,4 @@
 ---
-layout: ../../../layout/blogLayout.astro
 title: 'Emotional Interface'
 pubDate: "2025-05-23"
 description: 'Alle aantekeningen van deze WLW'

@@ -1,0 +1,27 @@
+---
+import { getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import BlogLayout from '../../layout/blogLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('sprints');
+
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { post: entry }
+  }));
+}
+
+const { slug } = Astro.params;
+const entry = await getEntry('sprints', slug);
+
+if (!entry) {
+  throw new Error(`Post not found: ${slug}`);
+}
+
+const { Content, headings, remarkPluginFrontmatter } = await entry.render();
+const data = entry.data;
+---
+<BlogLayout {...data}>
+  <Content />
+</BlogLayout>

@@ -1,5 +1,4 @@
 ---
-layout: ../../../layout/blogLayout.astro
 title: 'WLW Niels Leenheer Resilience'
 pubDate: "2025-04-25"
 description: 'Alle aantekeningen van deze WLW'

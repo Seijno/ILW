@@ -1,5 +1,4 @@
 ---
-layout: ../../../layout/blogLayout.astro
 title: 'Accesabillity'
 pubDate: "2025-03-28"
 description: 'Alle aantekeningen van deze WLW'

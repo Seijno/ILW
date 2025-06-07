@@ -1,5 +1,4 @@
 ---
-layout: ../../../layout/blogLayout.astro
 title: 'WLW Dion'
 pubDate: "2024-10-22"
 description: 'Aantekeningen van de WLW van Dion'

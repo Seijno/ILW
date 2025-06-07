@@ -2,25 +2,46 @@
 import BaseLayout from '../layout/baseLayout.astro'
 import Card from '../components/Card.astro'
 import Button from '../components/ToggleBtn.astro';
+import NotificationBtn from "../components/notificationBtn.astro"
+
+import { getCollection } from 'astro:content';
+
+const sprints = await getCollection('sprints');
+const wlwPosts = await getCollection('WLW');
+
+const posts = import.meta.glob('/src/content/sprints/*.md', { eager: true });
+
 const pageTitle = "I Love Web"
-const Posts = await Astro.glob('./posts/sprints/*.md');
-const WLW = await Astro.glob('./posts/WLW/*.md');
 ---
 <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
       integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
       crossorigin="anonymous"
-      defer></script>
+      defer>
+</script>
 <Button></Button>
+<NotificationBtn />
 <BaseLayout pageTitle={pageTitle}>
   <content class="sprintPosts active">
     <canvas id="gl-canvas"></canvas>
     <h2>Sprint posts</h2>
-    {Posts.map((post) => <Card url={post.url} blogName={post.frontmatter.title} pubDate={post.frontmatter.pubDate}/>)}
+    {sprints.map((post) => (
+      <Card
+        url={`/sprints/${post.slug}`}
+        blogName={post.data.title}
+        pubDate={post.data.pubDate}
+      />
+    ))}
   </content>
   <content class="WLWPosts">
     <h2>WLW aantekeningen</h2>
-    {WLW.map((post) => <Card url={post.url} blogName={post.frontmatter.title} pubDate={post.frontmatter.pubDate}/>)}
+    {wlwPosts.map((post) => (
+      <Card
+        url={`/WLW/${post.slug}`}
+        blogName={post.data.title}
+        pubDate={post.data.pubDate}
+      />
+    ))}
   </content>
 </BaseLayout>
 <script>
@@ -31,6 +52,7 @@ const WLW = await Astro.glob('./posts/WLW/*.md');
 <style>
   content{
     display: none;
+    padding: 12rem 0;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
@@ -42,6 +64,7 @@ const WLW = await Astro.glob('./posts/WLW/*.md');
   h2{
     text-align: center;
     width: 100%;
+    color: black;
   }
   canvas{
     z-index: -1;

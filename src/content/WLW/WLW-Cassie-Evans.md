@@ -1,5 +1,4 @@
 ---
-layout: ../../../layout/blogLayout.astro
 title: 'Beyond Tweening GSAP'
 pubDate: "2025-03-07"
 description: 'Alle aantekeningen van deze WLW'
