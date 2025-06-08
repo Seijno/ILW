@@ -19,7 +19,7 @@ if (!entry) {
   throw new Error(`Post not found: ${slug}`);
 }
 
-const { Content, headings, remarkPluginFrontmatter } = await entry.render();
+const { Content } = await entry.render();
 const data = entry.data;
 ---
 <BlogLayout {...data}>

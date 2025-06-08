@@ -9,8 +9,6 @@ import { getCollection } from 'astro:content';
 const sprints = await getCollection('sprints');
 const wlwPosts = await getCollection('WLW');
 
-const posts = import.meta.glob('/src/content/sprints/*.md', { eager: true });
-
 const pageTitle = "I Love Web"
 ---
 <script
